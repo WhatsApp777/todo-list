@@ -4,16 +4,7 @@
   align-items: center;
   gap: 20px;
   height: 50px;
-  cursor: pointer;
   font-size: 1.5rem;
   border: none;
   border-radius: 5px;
-}
-
-.button {
-  background-color: rgb(240, 240, 155);
-}
-
-.button:hover {
-  background-color: beige;
 }

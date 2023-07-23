@@ -1,6 +1,13 @@
+import "./UI.css";
+
 function Button({ onClick, title, children, disabled = false }) {
   return (
-    <button onClick={onClick} title={title} disabled={disabled}>
+    <button
+      className="button"
+      onClick={onClick}
+      title={title}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

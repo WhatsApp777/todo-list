@@ -7,12 +7,11 @@ function ButtonActions(props) {
   const { refresh, deleteCompleted, todoCompleted } = props;
   return (
     <div className="button-actions">
-      <Button onClick={refresh} className="button" title="удалить все задачи">
+      <Button onClick={refresh} title="удалить все задачи">
         <RiRefreshLine />
       </Button>
       <Button
         onClick={deleteCompleted}
-        className="button"
         title="Удалить выполненные задачи"
         disabled={!todoCompleted}
       >

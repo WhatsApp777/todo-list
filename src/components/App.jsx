@@ -10,6 +10,20 @@ function App() {
   const [text, setText] = React.useState(""); //строка которую вводят в Сабмит
   const todoCompleted = todos.filter((todo) => todo.isCompleted).length;
 
+  const one = "задача";
+  const twoThreeFour = "задачи";
+  const otherNumber = "задачь";
+
+  function todoCompletedTitle(todoCompleted) {
+    if (todoCompleted === 1) {
+      return `Выполнена - ${todoCompleted} задача`;
+    } else if (todoCompleted <= 4) {
+      return `Выполнено - ${todoCompleted} задачи`;
+    } else if (todoCompleted >= 5) {
+      return `Выполнено - ${todoCompleted} задачь`;
+    }
+  }
+
   function resetTodoHandler() {
     setTodos([]);
   }
@@ -74,9 +88,7 @@ function App() {
         toggleTodo={toggleTodoHandler}
       />
       {todoCompleted > 0 && (
-        <h2>{`You have completed ${todoCompleted} ${
-          todoCompleted > 1 ? "todos" : "todo"
-        }`}</h2>
+        <h2 className="has-completed">{todoCompletedTitle(todoCompleted)}</h2>
       )}
     </div>
   );

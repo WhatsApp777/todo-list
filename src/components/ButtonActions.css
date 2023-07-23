@@ -1,6 +1,19 @@
-.ui {
+.button-actions {
   display: flex;
   justify-content: center;
-  align-content: center;
-  padding: 40px 0 40px;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: rgb(240, 240, 155);
+}
+
+.button:hover {
+  background-color: beige;
 }

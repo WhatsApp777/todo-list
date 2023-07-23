@@ -60,11 +60,11 @@ function App() {
         onChange={changeInputValue}
         value={text}
       />
-      {todos.length > 0 && (
+      {!!todos.length && (
         <ButtonActions
           refresh={resetTodoHandler}
           deleteCompleted={deleteCompletedTodo}
-          todoCompleted={todoCompleted}
+          todoCompleted={!!todoCompleted}
         />
       )}
       <ToDoList
@@ -74,7 +74,9 @@ function App() {
         toggleTodo={toggleTodoHandler}
       />
       {todoCompleted > 0 && (
-        <h2 className="todoCompleted__title">{`${todoCompleted} ${todoCompleted} задача`}</h2>
+        <h2>{`You have completed ${todoCompleted} ${
+          todoCompleted > 1 ? "todos" : "todo"
+        }`}</h2>
       )}
     </div>
   );

@@ -6,15 +6,18 @@ import "./ButtonActions.css";
 function ButtonActions(props) {
   const { refresh, deleteCompleted, todoCompleted } = props;
   return (
-    <div className="ui">
-      <Button onClick={refresh} title="удалить все задачи">
+    <div className="button-actions">
+      <Button onClick={refresh} className="button" title="удалить все задачи">
         <RiRefreshLine />
       </Button>
-      {!!todoCompleted && (
-        <Button onClick={deleteCompleted} title="Удалить выполненные задачи">
-          <RiDeleteBin2Line />
-        </Button>
-      )}
+      <Button
+        onClick={deleteCompleted}
+        className="button"
+        title="Удалить выполненные задачи"
+        disabled={!todoCompleted}
+      >
+        <RiDeleteBin2Line />
+      </Button>
     </div>
   );
 }

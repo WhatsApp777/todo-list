@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form__input {
+  width: 45%;
+  height: 30px;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__submit {
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: beige;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__submit:hover {
+  background-color: rgb(240, 240, 155);
+}
